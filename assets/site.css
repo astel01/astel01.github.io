@@ -241,3 +241,27 @@ a { color: inherit; }
 .crop-bottom img {
   object-position: bottom;
 }
+
+.title-overlay {
+  position: absolute;
+  top: 14%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.title-overlay .title-main {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--accent-ember);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.7);
+}
+
+.title-overlay .title-sub {
+  font-size: 13px;
+  color: #dcd8ea;
+  margin-top: 12px;
+  line-height: 1.6;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.8);
+}
