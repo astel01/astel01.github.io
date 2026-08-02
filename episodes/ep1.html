@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1화 — 아스텔</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+  <div class="site-nav">
+    <a class="brand" href="../index.html">아스텔</a>
+    <span class="ep-tag">EP. 01</span>
+  </div>
+
+  <div class="strip">
+
+    <div class="cut">
+      <div class="cut-text text-normal" style="font-size:15px;color:var(--text-quiet)">2400년.</div>
+    </div>
+
+    <div class="cut size-full reveal">
+      <div class="cut-media"><img src="images/ep1/city.jpg" alt="미래 도시 전경"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-normal">인류는<br>새로운 국면을 맞이했다</div>
+    </div>
+
+    <div class="cut size-s">
+      <div class="cut-media"><img src="images/ep1/scientist_lightning.jpg" alt="연구 발표 장면"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-normal">과학의 정점에 오른 인류는</div>
+    </div>
+
+    <div class="cut size-m">
+      <div class="cut-media">
+        <img src="images/ep1/woman_flame.jpg" alt="손 위의 불꽃을 바라보는 여성">
+        <div class="bubble-wrap" style="top:14%; left:8%;"><div class="bubble">...말도 안 돼</div></div>
+      </div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact">마침내 상상조차<br>못 했던 힘을 손에 넣었다</div>
+    </div>
+
+    <div class="cut size-s">
+      <div class="cut-media"><img src="images/ep1/news_anchor.jpg" alt="뉴스 속보 장면"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-normal">사람들은 이를<br>축복이라 여겼다</div>
+    </div>
+
+    <div class="cut size-s">
+      <div class="cut-media"><img src="images/ep1/committee_room.jpg" alt="우려하는 회의 장면"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-normal">우려하는 목소리도 있었지만</div>
+    </div>
+
+    <div class="cut size-l reveal">
+      <div class="cut-media"><img src="images/ep1/protest_crowd.jpg" alt="능력은 모두의 것 시위 장면"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact">모든 인류가 힘을 가져야 한다는<br>여론을 막을 순 없었다</div>
+    </div>
+
+    <div class="cut size-full reveal">
+      <div class="cut-media"><img src="images/ep1/cosmic_beam.jpg" alt="전 인류 초능력화 프로젝트 시행 장면"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact" style="font-size:25px">그렇게 전 인류<br>초능력화 프로젝트가 시행되었다</div>
+    </div>
+  </div>
+
+  <div class="ep-end">
+    <span class="disabled">이전 화 없음</span>
+    <a class="next" href="ep2.html">다음 화 →</a>
+  </div>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

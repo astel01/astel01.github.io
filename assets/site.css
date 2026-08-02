@@ -1,0 +1,220 @@
+:root {
+  --bg: #0a0a12;
+  --text-main: #f2f0f7;
+  --text-quiet: #8b87a0;
+  --accent-violet: #7c6fef;
+  --accent-violet-bright: #b6a6ff;
+  --accent-ember: #ff9a52;
+  --note-border: #29253a;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a { color: inherit; }
+
+/* Top nav */
+.site-nav {
+  max-width: 560px;
+  width: 100%;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--note-border);
+}
+
+.site-nav .brand {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.site-nav .ep-tag {
+  font-size: 12px;
+  color: var(--text-quiet);
+}
+
+/* Landing page */
+.hero {
+  max-width: 560px;
+  width: 100%;
+  padding: 70px 24px 40px;
+  text-align: center;
+}
+
+.hero .tagline {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--accent-violet-bright);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: 30px;
+  line-height: 1.4;
+  margin: 0 0 18px;
+  font-weight: 800;
+}
+
+.hero p.lead {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #cfc9e2;
+  margin: 0 0 40px;
+}
+
+.hero .cta {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-violet), var(--accent-ember));
+  color: #0a0a12;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 14px 30px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+/* Strip */
+.strip {
+  max-width: 560px;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.cut {
+  padding: 0 24px;
+  margin-bottom: 4px;
+}
+
+.cut-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 20px 0 12px;
+}
+
+.cut-media img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.size-s .cut-media img { max-height: 130px; }
+.size-m .cut-media img { max-height: 230px; }
+.size-l .cut-media img { max-height: 340px; }
+.size-full { padding: 0; }
+.size-full .cut-media {
+  border-radius: 0;
+  box-shadow: 0 0 60px 6px rgba(255,154,82,0.18), 0 0 0 1px rgba(255,154,82,0.14) inset;
+}
+.size-full .cut-media img { max-height: 520px; }
+
+.reveal {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cut-text {
+  text-align: center;
+  padding: 8px 4px 20px;
+}
+
+.text-normal {
+  font-size: 17px;
+  color: var(--text-main);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.text-impact {
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--accent-ember);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.text-impact-quote {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--accent-ember);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  font-style: italic;
+}
+
+.bubble-wrap {
+  position: absolute;
+  max-width: 62%;
+}
+
+.bubble {
+  background: #f4f2fa;
+  color: #17151f;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 13px;
+  border-radius: 14px 14px 14px 4px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+  line-height: 1.4;
+}
+
+/* Episode end nav */
+.ep-end {
+  max-width: 560px;
+  width: 100%;
+  padding: 30px 24px 70px;
+  border-top: 1px solid var(--note-border);
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ep-end a, .ep-end span {
+  flex: 1;
+  text-align: center;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 13px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.ep-end a {
+  background: #17151f;
+  border: 1px solid var(--note-border);
+  color: var(--text-main);
+}
+
+.ep-end span.disabled {
+  color: #4a4657;
+  border: 1px solid var(--note-border);
+}
+
+.ep-end a.next {
+  background: linear-gradient(135deg, var(--accent-violet), var(--accent-ember));
+  color: #0a0a12;
+  border: none;
+}

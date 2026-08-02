@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2화 — 아스텔</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+  <div class="site-nav">
+    <a class="brand" href="../index.html">아스텔</a>
+    <span class="ep-tag">EP. 02</span>
+  </div>
+
+  <div class="strip">
+
+    <div class="cut size-m">
+      <div class="cut-media"><img src="images/ep2/earth_top.jpg" alt="지구, 첫 번째 컷"></div>
+    </div>
+
+    <div class="cut size-l reveal">
+      <div class="cut-media"><img src="images/ep2/earth_full.jpg" alt="지구, 두 번째 컷 (확대)"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-normal">나이도, 신분도 상관없었다</div>
+    </div>
+
+    <div class="cut size-l reveal">
+      <div class="cut-media">
+        <img src="images/ep2/girl_power.jpg" alt="소녀가 손 위의 빛을 보여주는 장면">
+        <div class="bubble-wrap" style="top:8%; left:10%;"><div class="bubble">아빠! 여기봐!!</div></div>
+      </div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact">그 힘은 모두에게<br>동시에 내려앉았다</div>
+    </div>
+
+    <div class="cut size-m">
+      <div class="cut-media">
+        <img src="images/ep2/man_power.jpg" alt="남성이 놀라며 손 위의 빛을 보는 장면">
+        <div class="bubble-wrap" style="top:10%; left:6%;"><div class="bubble">나은아... 그게? 어어!?</div></div>
+      </div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-normal">더불어 과학은<br>인간의 수명마저 뛰어넘었다</div>
+    </div>
+
+    <div class="cut size-l reveal">
+      <div class="cut-media"><img src="images/ep2/pod_capsule.jpg" alt="수명 연장 캡슐 시술 장면"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact">200살~300살.<br>그러나 그 시간은 모두의 것이 아니었다</div>
+    </div>
+
+    <div class="cut size-s">
+      <div class="cut-media"><img src="images/ep2/elder_window.jpg" alt="노년 여성이 도시를 바라보는 장면"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact">한 시대 안에<br>두 개의 시간이 흘렀다</div>
+    </div>
+
+    <div class="cut size-m">
+      <div class="cut-media"><img src="images/ep2/city_street.jpg" alt="도시 거리 전경"></div>
+    </div>
+
+    <div class="cut size-full reveal">
+      <div class="cut-media"><img src="images/ep2/final_portrait.jpg" alt="빛과 지구본을 담은 마무리 이미지"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact" style="font-size:25px">초능력은<br>모두에게 주어졌지만</div>
+    </div>
+  </div>
+
+  <div class="ep-end">
+    <a href="ep1.html">← 이전 화</a>
+    <a class="next" href="ep3.html">다음 화 →</a>
+  </div>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
