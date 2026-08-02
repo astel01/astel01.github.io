@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4화 — 아스텔</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+  <div class="site-nav">
+    <a class="brand" href="../index.html">아스텔</a>
+    <span class="ep-tag">EP. 04</span>
+  </div>
+
+  <div class="strip">
+
+    <div class="cut">
+      <div class="cut-text text-normal">살아남은 자들은</div>
+    </div>
+
+    <div class="cut size-l reveal">
+      <div class="cut-media"><img src="images/ep4/ark_boarding.jpg" alt="마지막 방주에 오르는 사람들"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact">마지막 방주,<br>'노아'에 몸을 실었다</div>
+    </div>
+
+    <div class="cut size-m">
+      <div class="cut-media"><img src="images/ep4/window_earth.jpg" alt="창밖으로 지구를 바라보는 사람들"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-normal">그렇게 인류는<br>돌아갈 곳 없는 항해를 시작했다</div>
+    </div>
+
+    <div class="cut size-s">
+      <div class="cut-media"><img src="images/ep4/ark_in_space.jpg" alt="우주를 떠도는 방주"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-normal" style="font-size:15px;color:var(--text-quiet)">한참의 시간이 흘렀다</div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact">그러자 그 안에서도,<br>생명은 태어났다</div>
+    </div>
+
+    <div class="cut size-l reveal">
+      <div class="cut-media"><img src="images/ep4/family_newborn.jpg" alt="아기를 안은 부모"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-normal">지구를 본 적 없는 아이들에게<br>어른들은 몇번이고 되새겼다</div>
+    </div>
+
+    <div class="cut size-m">
+      <div class="cut-media"><img src="images/ep4/classroom_teach.jpg" alt="아이들에게 지구의 참극을 가르치는 장면"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact-quote">"다시는, 반복하지 말자"</div>
+    </div>
+
+    <div class="cut size-full reveal">
+      <div class="cut-media"><img src="images/ep4/children_play.jpg" alt="방주 안에서 웃으며 노는 아이들"></div>
+    </div>
+  </div>
+
+  <div class="ep-end">
+    <a href="ep3.html">← 이전 화</a>
+    <span class="disabled">5화 준비 중</span>
+  </div>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
