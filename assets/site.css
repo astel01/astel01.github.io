@@ -224,3 +224,7 @@ a { color: inherit; }
   -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
 }
+
+.crop-bottom img {
+  object-position: bottom;
+}
