@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5화 — 아스텔</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+  <div class="site-nav">
+    <a class="brand" href="../index.html">아스텔</a>
+    <span class="ep-tag">EP. 05</span>
+  </div>
+
+  <div class="strip">
+
+    <div class="cut">
+      <div class="cut-text text-normal">하지만 방주도<br>결국 사람이 사는 곳이었다</div>
+    </div>
+
+    <div class="cut size-m">
+      <div class="cut-media"><img src="images/ep5/tax_negotiation.jpg" alt="세금 배급을 둘러싼 갈등"></div>
+    </div>
+
+    <div class="cut size-m">
+      <div class="cut-media">
+        <img src="images/ep5/scared_girl.jpg" alt="겁에 질린 소녀">
+        <div class="bubble-wrap" style="top:10%; right:8%;"><div class="bubble">아빠...무서워..</div></div>
+      </div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact">결국 벽은<br>이곳에서도 세워졌다</div>
+    </div>
+
+    <div class="cut size-l reveal">
+      <div class="cut-media"><img src="images/ep5/zone_wall.jpg" alt="구역을 나누는 벽과 경비"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact-quote">그러나 신은 존재했던 것일까?</div>
+    </div>
+
+    <div class="cut size-l reveal">
+      <div class="cut-media">
+        <img src="images/ep5/scientists_discovery.jpg" alt="새로운 행성을 발견하는 과학자들">
+        <div class="bubble-wrap" style="top:10%; left:6%;"><div class="bubble">지구랑 똑같아!</div></div>
+      </div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact">수십 년의 방랑 끝에<br>마침내 희망이 보였다</div>
+    </div>
+
+    <div class="cut size-full reveal">
+      <div class="cut-media"><img src="images/ep5/crowd_celebrate.jpg" alt="환호하는 방주 사람들"></div>
+    </div>
+
+    <div class="cut">
+      <div class="cut-text text-impact">하지만 평화는<br>오래가지 못했다</div>
+    </div>
+
+    <div class="cut size-l reveal">
+      <div class="cut-media"><img src="images/ep5/space_explosion.jpg" alt="방주 외부 폭발"></div>
+    </div>
+
+    <div class="cut size-full reveal">
+      <div class="cut-media">
+        <img src="images/ep5/chaos_dayoon.jpg" alt="혼란 속 다윤과 엄마">
+        <div class="bubble-wrap" style="top:8%; left:6%;"><div class="bubble">다윤아 위험해!</div></div>
+      </div>
+    </div>
+
+    <div class="cut size-l reveal">
+      <div class="cut-media"><img src="images/ep5/chaos_final.jpg" alt="혼란 속 대피 장면"></div>
+    </div>
+  </div>
+
+  <div class="ep-end">
+    <a href="ep4.html">← 이전 화</a>
+    <span class="disabled">6화 준비 중</span>
+  </div>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
